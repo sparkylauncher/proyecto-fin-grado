@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/squeleton.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+    <script src="{% static 'js/nick_check.js' %}"></script>
+    <script src="{% static 'js/websocket.js' %}"></script>
+</head>
+<body>
+<nav class="bg-dark sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between">
+      <a class="py-2 text-white text-decoration-none" href="#"><img src="{% static 'img/logo.svg' %} " width="30" height="30" class="bg-light">
+          CARTAS CONTRA LA HISPANIDAD</a>
+    <a class="py-2 d-none d-md-inline-block text-white" href="/acerca_del_juego">Sobre el juego</a>
+    <a class="py-2 d-none d-md-inline-block text-white" href="/salas">Juega ahora</a>
+    <a class="py-2 d-none d-md-inline-block text-white" href="/contacto">Contacto</a>
+  </div>
+</nav>
+
+{% block content %}{% endblock %}
+
+<footer class="myfooter bg-dark"><div class="container text-center">Cartas contra la humanidad - 2021</div></footer>
+
+</body>
+</html>

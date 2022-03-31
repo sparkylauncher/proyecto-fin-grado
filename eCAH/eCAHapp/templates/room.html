@@ -1,0 +1,308 @@
+{% extends "squeleton.html" %}
+{% block content %}
+
+<div id="nick-input">
+    Introduce tu nick:
+    <input id="new_nick" type="text" size="100"><br>
+    <input id="submit" type="button" value="Elegir nick">
+</div>
+<div id="game" hidden>
+    <input id="start-game"  class="" type="button" value="Comenzar partida"  disabled hidden>
+    <div id="nplayers"></div>
+    <div id="nround"></div>
+    <div class="row">
+        <div id="my_log" class="col-3"></div>
+        <div id="black_card"  class="card text-white bg-dark col-3"></div>
+        <div id="played_cards" class="col-6">
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_0" class="card-text"></p>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_1" class="card-text"></p>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_2" class="card-text"></p>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_3" class="card-text"></p>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_4" class="card-text"></p>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_5" class="card-text"></p>
+                </div>
+            </div>
+            <div class="card col">
+                <div class="card-body">
+                    <p id="played_card_6" class="card-text"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="king_message" hidden>Eres el rey, espera a que terminen de elegir sus cartas</div>
+    <div id="my_cards" class="row">
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_0" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_1" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_2" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_3" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_4" class="card-text"></p>
+            </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_5" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_6" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_7" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_8" class="card-text"></p>
+            </div>
+        </div>
+        <div class="card col playable_card">
+            <div class="card-body">
+                <p id="card_9" class="card-text"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</div>
+    {{ room_name|json_script:"room-name" }}
+    <script>
+    const roomName = JSON.parse(document.getElementById('room-name').textContent);
+
+    const mywebsocket = websocket_room_create();
+
+    var nickname = "";
+    var game_status = "WAITING_START";
+    var king = "";
+    var nround = 0;
+    var players_nicks = [];
+    my_cards = [];
+    used_cards = [];
+    avaiable_cards = [];
+    black_cards = [];
+    round = {};
+    ncards_played = 0;
+    var scores = {}
+
+        document.querySelector('#new_nick').focus();
+
+        document.querySelectorAll('.playable_card').forEach(function(playable_card){
+               playable_card.onclick = function(e) {
+                    round[nickname] = playable_card.innerText;
+                    my_cards = my_cards.filter(item => item !== round[nickname])
+                    used_cards.push(round[nickname]);
+                    mywebsocket.send(JSON.stringify({
+                        'event_type': 'card_played',
+                        'player_name': nickname,
+                        'card_text': round[nickname]
+                    }));
+               }
+        });
+
+        document.querySelector('#submit').onclick = function(e) {
+            nickname = document.querySelector('#new_nick').value;
+
+            if(nick_is_taken(nickname)){
+                alert("nick is taken");
+            }else{
+                document.querySelector('#nick-input').hidden=true;
+                document.querySelector('#game').hidden=false;
+
+                mywebsocket.send(JSON.stringify({
+                    'event_type': 'player_connect',
+                    'player_name': nickname,
+                    'room_name': roomName,
+                }));
+            }
+        }
+
+        mywebsocket.onmessage = function(e) {
+            const data = JSON.parse(e.data);
+            switch (data.event_type){
+                case 'player_connect':
+                    document.querySelector('#nplayers').innerHTML = data.nplayers;
+                    if (data.nplayers == 1 && data.player_name == nickname){
+                        document.querySelector('#start-game').hidden = false;
+                    }
+                    players_nicks = data.players_list;
+                    if (data.nplayers > 2){
+                        document.querySelector('#start-game').disabled = false;
+                    }
+                    break;
+                case 'player_disconnect':
+                    document.querySelector('#nplayers').innerHTML = data.nplayers;
+                    if (players_nicks.indexOf(data.player_name) == 0){
+                        players_nicks.shift();
+                        if(players_nicks[0] == nickname){
+                            document.querySelector('#start-game').hidden = false;
+                        }
+                    }else{
+                        var pos = players_nicks.indexOf(data.player_nickname);
+                        players_nicks.splice(pos, 1);
+                        console.log(players_nicks);
+                    }
+                    break;
+                case 'game_start':
+                    pos = players_nicks.indexOf(nickname);
+                    pos = 10 * pos;
+                    my_cards = data.white_cards.splice(pos,10);
+                    used_cards = data.white_cards.splice(0,players_nicks.length);
+                    avaiable_cards = data.white_cards;
+                    black_cards = data.black_cards;
+                    king  = players_nicks[0];
+                    console.log("nicks" + players_nicks);
+                    for(i = 0; i < players_nicks.length;i++){
+                        scores[players_nicks[i]] = 0;
+                    }
+                    play_round();
+                    break;
+                case 'card_played':
+                    round[data.nickname] = data.card_played;
+                    if(Object.keys(round).length == players_nicks.length-1){
+                        for (i=0;i<Object.keys(round).length;i++){
+                            $('#played_card_' + i).html(Object.values(round)[i]);
+                        }
+                    }
+                    if(king == nickname){
+                    c = $("#played_cards").children()
+                        for (i=0;i<Object.keys(round).length;i++){
+                            c[i].classList.add("winner_card");
+                        }
+                        w =$(".winner_card");
+                        for(i = 0; i < w.length; i++){
+                            w[i].onclick = function(e) {
+                            console.log(round);
+                                winner_nickname = Object.keys(round).find(key => round[key] === this.innerText);
+                                console.log("ganador de la ronda: " + winner_nickname);
+                                mywebsocket.send(JSON.stringify({
+                                    'event_type': 'round_winner',
+                                    'player_name': winner_nickname,
+                                }));
+                            }
+                        }
+                    }
+                    break;
+                case 'round_winner':
+                    scores[data.nickname]++;
+                    for(player in scores){
+                        if(scores[player] == 3 && players_nicks[0] == nickname){
+                            mywebsocket.send(JSON.stringify({
+                                    'event_type': 'game_winner',
+                                    'player_name': player,
+                            }));
+                            break;
+                        }
+                    }
+                    c = $("#played_cards").children()
+                    for (i=0;i<Object.keys(round).length;i++){
+                        c[i].firstElementChild.firstElementChild.innerText = "";
+                    }
+                    round = {};
+                    if (king == nickname){
+                        for (i=0;i<Object.keys(round).length;i++){
+                            c[i].classList.remove("winner_card");
+                        }
+                    }else{
+                        my_cards.push(avaiable_cards[players_nicks.indexOf(nickname)]);
+                        avaiable_cards.splice(0,players_nicks.length);
+                    }
+
+                    king = data.nickname;
+                    play_round();
+                    //volver a activar clicks en mis cartas
+                    break;
+                 case 'game_winner':
+                    alert("el ganador es: " + data.nickname);
+                    break;
+
+
+            }
+
+        };
+
+        mywebsocket.onclose = function(e) {
+            console.error('Chat socket closed unexpectedly');
+        };
+
+        document.querySelector('#start-game').onclick = function(e) {
+            document.querySelector('#start-game').hidden = true;
+            mywebsocket.send(JSON.stringify({
+                    'event_type': 'game_start',
+                    'room_name': roomName,
+                }));
+        }
+
+    function play_round(){
+        $("#black_card").html(black_cards[nround]);
+        for (i=0;i<my_cards.length;i++){
+            document.querySelector('#card_' + i).innerHTML = my_cards[i];
+        }
+        console.log("rey " + king);
+        console.log("jugadores " + players_nicks);
+        if (king == nickname){
+            document.querySelector('#my_cards').hidden = true;
+            document.querySelector('#king_message').hidden = false;
+
+        }else{
+            document.querySelector('#my_cards').hidden = false;
+            document.querySelector('#king_message').hidden = true;
+        }
+        nround++;
+        for (const property in scores) {
+        var node = document.createElement("LI");
+        var textnode = document.createTextNode(`${property}: ${scores[property]}`);
+        node.appendChild(textnode);
+        document.getElementById("my_log").appendChild(node);
+        }
+        $("#nround").html("Ronda nº " + nround);
+
+    }
+
+    </script>
+
+{% endblock %}

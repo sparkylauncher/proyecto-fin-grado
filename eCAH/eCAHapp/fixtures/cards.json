@@ -1,0 +1,810 @@
+[
+    {
+    "model": "eCAHapp.card",
+    "pk": 1,
+    "fields": {
+      "text": "El papa",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 2,
+    "fields": {
+      "text": "Juan Carlos I",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 3,
+    "fields": {
+      "text": "Esperanza Aguirre",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 4,
+    "fields": {
+      "text": "El Rubius",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 5,
+    "fields": {
+      "text": "Carmen de Mairena",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 6,
+    "fields": {
+      "text": "Julio César",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 7,
+    "fields": {
+      "text": "John Rambo",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 8,
+    "fields": {
+      "text": "Matías Prats",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 9,
+    "fields": {
+      "text": "Jordi Évole",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 10,
+    "fields": {
+      "text": "Cristiano Ronaldo",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 11,
+    "fields": {
+      "text": "Falete",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 12,
+    "fields": {
+      "text": "King Kong",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 13,
+    "fields": {
+      "text": "Mario Bros",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 14,
+    "fields": {
+      "text": "M. Rajoy",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 15,
+    "fields": {
+      "text": "Britney Spears",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 16,
+    "fields": {
+      "text": "Barack Obama",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 17,
+    "fields": {
+      "text": "Estopa",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 18,
+    "fields": {
+      "text": "Mario Vaquerizo",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 19,
+    "fields": {
+      "text": "Torrente",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 20,
+    "fields": {
+      "text": "Rafa Nadal",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 21,
+    "fields": {
+      "text": "Sentirse querido",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 22,
+    "fields": {
+      "text": "Beberte un zumo caducado",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 23,
+    "fields": {
+      "text": "Bailar la Macarena",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 24,
+    "fields": {
+      "text": "Hacer la conga",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 25,
+    "fields": {
+      "text": "Saltarse un STOP",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 26,
+    "fields": {
+      "text": "Comerte la ficha del parchís de otro",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 27,
+    "fields": {
+      "text": "Ser otaku",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 28,
+    "fields": {
+      "text": "Dar envidia",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 29,
+    "fields": {
+      "text": "Gritarle a la tele",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 30,
+    "fields": {
+      "text": "Comerse el mundo",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 31,
+    "fields": {
+      "text": "Pegarse un guarrazo",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 32,
+    "fields": {
+      "text": "Leer la biblia",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 33,
+    "fields": {
+      "text": "Comer hasta reventar",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 34,
+    "fields": {
+      "text": "Hacer breakdance",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 35,
+    "fields": {
+      "text": "Arruinarle el día a otro",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 36,
+    "fields": {
+      "text": "Escuchar 'Despacito' por enésima vez",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 37,
+    "fields": {
+      "text": "Ir a un circo ambulante",
+      "is_black": "False"
+    }
+  },
+      {
+    "model": "eCAHapp.card",
+    "pk": 38,
+    "fields": {
+      "text": "Caer mal a la gente",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 39,
+    "fields": {
+      "text": "Birlarle la novia a otro",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 40,
+    "fields": {
+      "text": "Volverse cantante de reguetón",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 41,
+    "fields": {
+      "text": "Francia",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 42,
+    "fields": {
+      "text": "La casa de la abuela",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 43,
+    "fields": {
+      "text": "El patio del colegio",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 44,
+    "fields": {
+      "text": "El cubo de la basura",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 45,
+    "fields": {
+      "text": "El parking del polideportivo",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 46,
+    "fields": {
+      "text": "Un bar maloliente",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 47,
+    "fields": {
+      "text": "La santa iglesia",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 48,
+    "fields": {
+      "text": "Tu casa",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 49,
+    "fields": {
+      "text": "La habitación de un motel",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 50,
+    "fields": {
+      "text": "El congreso de los diputados",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 51,
+    "fields": {
+      "text": "La plaza de Cibeles",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 52,
+    "fields": {
+      "text": "Un centro comercial",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 53,
+    "fields": {
+      "text": "El McDonals de la esquina",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 54,
+    "fields": {
+      "text": "Mercadona",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 55,
+    "fields": {
+      "text": "EEUU",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 56,
+    "fields": {
+      "text": "Caer mal a la gente",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 57,
+    "fields": {
+      "text": "El Capitolio",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 58,
+    "fields": {
+      "text": "El programa de Wyoming",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 59,
+    "fields": {
+      "text": "La teletienda",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 60,
+    "fields": {
+      "text": "Un todo a 100",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 61,
+    "fields": {
+      "text": "Un bocata de albóndigas",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 62,
+    "fields": {
+      "text": "Mi anillo de boda",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 63,
+    "fields": {
+      "text": "Un perro con sobrepeso",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 64,
+    "fields": {
+      "text": "El coche fantástico",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 65,
+    "fields": {
+      "text": "Un señor con boina",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 66,
+    "fields": {
+      "text": "La vejez",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 67,
+    "fields": {
+      "text": "Mal karma",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 68,
+    "fields": {
+      "text": "Ver un gato negro",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 69,
+    "fields": {
+      "text": "La mascota de mi vecino",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 70,
+    "fields": {
+      "text": "Un brick de leche",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 71,
+    "fields": {
+      "text": "Un dolor de muelas",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 72,
+    "fields": {
+      "text": "El caballo blanco de Santiago",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 73,
+    "fields": {
+      "text": "Una lata de sardinas",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 74,
+    "fields": {
+      "text": "Un autobús sin puertas",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 75,
+    "fields": {
+      "text": "Envasado al vacío",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 76,
+    "fields": {
+      "text": "Engordar a base de bollicaos",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 77,
+    "fields": {
+      "text": "Una piedra",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 78,
+    "fields": {
+      "text": "Abrir tu mente",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 79,
+    "fields": {
+      "text": "Comida para gatos",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 80,
+    "fields": {
+      "text": "Tu ex",
+      "is_black": "False"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 81,
+    "fields": {
+      "text": "Hoy tenemos de cenar _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 82,
+    "fields": {
+      "text": "Tu mejor amigo",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 83,
+    "fields": {
+      "text": "No se qué haría sin _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 84,
+    "fields": {
+      "text": "_____ , a veces mejor de lo que parece",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 85,
+    "fields": {
+      "text": "El próximo libro de JK Rowling se llamará Harry Potter y _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 86,
+    "fields": {
+      "text": "El gobierno ha prohibido _____ por ser demasiado peligroso",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 87,
+    "fields": {
+      "text": "Lo siento profe, no pude terminar los deberes por _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 88,
+    "fields": {
+      "text": "El 90% de los matrimonios terminan debido a _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 89,
+    "fields": {
+      "text": "En vez de regalos este año los Reyes Magos nos traerán _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 90,
+    "fields": {
+      "text": "_____ es mi mayor virtud",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 91,
+    "fields": {
+      "text": "¿que es peor que ser drogadicto?",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 92,
+    "fields": {
+      "text": "Nada como acabar el día con _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 93,
+    "fields": {
+      "text": "_____, hoy a mitad de precio",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 94,
+    "fields": {
+      "text": "Si somos lo que comemos, yo sería _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 95,
+    "fields": {
+      "text": "_____ y tu mejor amigo se llevarían bien",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 96,
+    "fields": {
+      "text": "¿Cual es mi placer culposo?",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 97,
+    "fields": {
+      "text": "_____ . Solo quería decir eso.",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 98,
+    "fields": {
+      "text": "Mi viaje escolar fue arruinado por _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 99,
+    "fields": {
+      "text": "Una cena romántica no sería lo mismo sin _____",
+      "is_black": "True"
+    }
+  },
+          {
+    "model": "eCAHapp.card",
+    "pk": 100,
+    "fields": {
+      "text": "La próxima peli de Disney estará basa en _____",
+      "is_black": "True"
+    }
+  },
+        {
+    "model": "eCAHapp.card",
+    "pk": 101,
+    "fields": {
+      "text": "El conejo de nesquick",
+      "is_black": "False"
+    }
+  }
+]
